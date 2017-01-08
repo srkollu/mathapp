@@ -1,0 +1,38 @@
+<ion-view cache-view="false">
+    <ion-nav-title>Employee List</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <a class="button button-left button-icon  icon-left ion-android-add-circle" ui-sref="app.employee({employeeId:''})"></a>&nbsp;&nbsp;
+    </ion-nav-buttons>
+    <ion-content overflow-scroll="false">
+        <ion-list>
+            <div ng-repeat="employee in employees track by $index" class="item item-body" style="padding:0px">
+                <a ng-href="#/app/employee/{{employee.employeeId}}">
+                    <div class="row" style="padding:0px;">
+                        <div class=" col-33 module prop-manage-row-thumbnail">
+                            <img ng-src="img/no_pic_found.jpg" />
+                            <header>
+                                <h1>
+                                    <i class="icon"></i>   <br />
+                                    <i class="icon"></i>  <br />
+                                    <i class="icon"></i>  <br />
+                                    <i class="icon ion-android-arrow-dropright">Employee since {{ employee.daysAgo }} days&nbsp;&nbsp;</i>
+                                </h1>
+                            </header>
+                        </div>
+                        <div class="col-67 module prop-manage-row-thumbnail">
+                            <header style="background-color:#000">
+                                <h1>
+                                    <i class="icon ion-android-arrow-dropright"></i>  {{ employee.name}} <br />
+                                    <i class="icon ion-android-arrow-dropright"></i>  {{ employee.role}} <br />
+                                    <i class="icon ion-android-arrow-dropright"></i> Reports to {{ employee.reportsTo}} <br />
+                                    <i class="icon ion-android-arrow-dropright">&nbsp;&nbsp;</i>
+                                </h1>
+                            </header>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </ion-list>
+        <pre>list={{employees}}</pre>
+    </ion-content>
+</ion-view>

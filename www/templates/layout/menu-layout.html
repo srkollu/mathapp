@@ -1,0 +1,28 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+      <header class="bar bar-header bar-dark"  align-title=" center">
+          <h2 class="title">QTC Employees</h2>
+      </header>
+          <ion-content class="has-header">
+              <ion-list>
+                 
+                  <ion-item class="item-stable" ui-sref="app.employeelist" menu-close nav-clear>List Employees</ion-item>
+                  <ion-item class="item-stable" ui-sref="app.employee({employeeId:''})" menu-close nav-clear>Add New Employee</ion-item>
+
+                  <ion-item class="item-stable" ui-sref="app.support" menu-close nav-clear>Support</ion-item>
+                    
+                  </ion-list>
+</ion-content>
+</ion-side-menu>
+</ion-side-menus>

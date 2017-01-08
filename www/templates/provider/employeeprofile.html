@@ -1,0 +1,83 @@
+<ion-view cache-view="false" view-title="Employee Profile" ng-controller="EmployeeProfileCtrl">
+    <ion-nav-buttons side="right">
+        <button class="button button-left button-icon icon-left ion-android-cloud-done" ng-click="submitmyform()"></button>&nbsp;&nbsp;
+        <button class="button button-center button-icon  icon-left ion-arrow-return-left" ng-click="goBack()"></button>&nbsp;&nbsp;
+        <button class="button button-right button-icon icon-left ion-android-delete" ng-click="deleteItem()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <!--  <pre>list={{profile}}</pre> -->
+        <div class="card">
+            <ul class="list">
+                <li class="item">
+                    <div class="item item-divider item-royal">
+                        GENERAL
+                    </div>
+                    <ul class="list">
+                        <li class="item">
+                            <label class="item-input">
+                                <input type="text" placeholder="Contact Name" ng-model="profile.name" />
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="item-input">
+                                <input type="text" placeholder="Title" ng-model="profile.role" />
+                            </label>
+                        </li>
+                       
+                        <li class="item">
+                            <label class="item-input">
+                                <input type="text" placeholder="Reports To" ng-model="profile.reportsTo" />
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="item-input">
+                                <input type="text" placeholder="Contact Number" ng-model="profile.phone" />
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="item-input">
+                                <input type="text" placeholder="Alternate Contact Number" ng-model="profile.phoneAlt" />
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="item-input">
+                                <input type="text" placeholder="Email" ng-model="profile.email" />
+                            </label>
+                        </li>
+                        <li class="item">
+                            <div class="col col-100" ng-click="showPopupLovs('Expertize')">
+                                <div class="row-top">
+                                    Expertize:
+                                </div>
+                                <div class="row-bottom">
+                                    &nbsp;<i ng-repeat="itm in filters['Expertize']">
+                                        <i ng-if="itm.value==true">
+                                            {{itm.name}} &nbsp;
+                                        </i>
+                                    </i>
+                                </div>
+                            </div>
+                            <label class="item-input">
+                                <input type="text" placeholder="Expertize" ng-model="profile.expertize" />
+                            </label>
+                        </li>
+                        <li class="item">
+                            Date:
+                            <input type="date" placeholder="Hired On" ng-model="profile.hiredOn" />
+                        </li>
+<li class="item">
+                            <label class="item-input">
+                                <input type="text" placeholder="Applications" ng-model="profile.applications" />
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="item-input">
+                                <input type="text" placeholder="Team" ng-model="profile.team" />
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>
